@@ -15,9 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from myapp.views import index as home
+from myapp.views import home, start, stop, pause, resume, wakeup
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
+    path('start/', start),
+    path('stop/', stop),
+    path('pause/', pause),
+    path('resume/', resume),
+    path('wakeup/', wakeup),
 ]
